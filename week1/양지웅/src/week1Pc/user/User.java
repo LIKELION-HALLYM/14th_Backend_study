@@ -1,10 +1,8 @@
-package week1Pc;
-
-import org.w3c.dom.ls.LSOutput;
+package week1Pc.user;
 
 public class User {
-   private String name;
-   private int age;
+   protected String name;
+   protected int age;
 
     public User(String name, int age ) {
         this.name = name;
