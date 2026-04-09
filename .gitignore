@@ -9,3 +9,5 @@
 .idea/
 out/
 *.class
+.DS_Store
+
