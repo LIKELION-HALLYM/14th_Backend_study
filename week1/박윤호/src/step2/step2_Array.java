@@ -1,3 +1,5 @@
+package step2;
+
 public class step2_Array {
       public static void main(String[] args) {
         int[] arr = {90, 85, 78, 92, 88};
@@ -5,8 +7,8 @@ public class step2_Array {
             System.out.print(i + 1 + "번 " + " 학생" + arr[i] + " 점");
             System.out.println();
         }
-          int total = get_total(arr);
-          System.out.print(total);
+//          int total = get_total(arr);
+          System.out.print(get_total(arr));
       }
 
     public static int get_total (int[] arr) {

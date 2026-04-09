@@ -1,3 +1,5 @@
+package step1;
+
 public class JavaPracticeApplication {
 
     public static void main(String[] args) {
