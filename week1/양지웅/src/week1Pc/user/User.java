@@ -17,7 +17,7 @@ public class User {
     void setName(String name) {
         this.name = name;
     }
-    void setAge(int age) {
+    public void setAge(int age) {
         if(age<0) {
             System.out.println("올바르지 않은 나이입니다.");
 
@@ -26,7 +26,8 @@ public class User {
     }
 
 
-    public void printInfo() {
+    public void
+    printInfo() {
         System.out.println("name "+ name + " age "+ age);
     }
     public static void main(String[] args) {
