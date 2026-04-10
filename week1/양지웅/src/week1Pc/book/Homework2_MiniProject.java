@@ -1,6 +1,6 @@
 package week1Pc.book;
 
-public class BookMain {
+public class Homework2_MiniProject {
 //    main에서 실행하기
 //
 //    Book 2개, EBook 1개, SaleBook 1개를 Book[] 배열에 담기
