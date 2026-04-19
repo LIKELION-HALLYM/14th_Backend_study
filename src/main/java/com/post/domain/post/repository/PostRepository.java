@@ -13,7 +13,7 @@ import com.post.domain.post.entity.Post;
 @Repository
 public interface PostRepository extends JpaRepository<Post, Long> {
 
-	Optional<Post> findByTitle(String title);
+	boolean existsByTitle(String title);
 
 	List<Post> findAllByOrderByCreatedAtDesc();
 	//페이징 적용

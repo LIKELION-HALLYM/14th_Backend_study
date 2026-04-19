@@ -32,8 +32,9 @@ public class PostService {
 	@Transactional
 	public PostResponse create(PostCreateRequest request) {
 
-		postRepository.findByTitle(request.title())
-			.orElseThrow(() -> new BusinessException(ErrorCode.POST_ALREADY_EXISTS));
+		if(postRepository.existsByTitle(request.title())) {
+			throw new BusinessException(ErrorCode.POST_ALREADY_EXISTS);
+		}
 
 		Post post = Post.create(
 			request.title(),
