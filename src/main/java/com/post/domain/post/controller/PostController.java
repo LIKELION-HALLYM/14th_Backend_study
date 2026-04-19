@@ -1,15 +1,20 @@
 package com.post.domain.post.controller;
 
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.post.domain.post.dto.request.PostCreateRequest;
 import com.post.domain.post.dto.request.PostUpdateRequest;
+import com.post.domain.post.dto.response.PostListResultResponse;
 import com.post.domain.post.dto.response.PostResponse;
 import com.post.domain.post.service.PostService;
 import com.post.global.common.dto.SuccessResponse;
@@ -47,5 +52,18 @@ public class PostController {
 		return SuccessResponse.noContent();
 	}
 
+	@GetMapping("/all")
+	public SuccessResponse<PostListResultResponse> getAllPosts() {
+		return SuccessResponse.ok(postService.getAllExistSort());
+	}
 
+	//페이징 적용
+	@GetMapping
+	public SuccessResponse<PostListResultResponse> getAllPostsExistPaging(
+		@RequestParam(defaultValue = "0") int page,
+		@RequestParam(defaultValue = "10") int size
+	) {
+		Pageable pageable = PageRequest.of(page, size);
+		return SuccessResponse.ok(postService.getAllExistPaging(pageable));
+	}
 }
