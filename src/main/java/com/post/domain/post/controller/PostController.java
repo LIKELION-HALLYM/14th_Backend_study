@@ -1,5 +1,6 @@
 package com.post.domain.post.controller;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -30,12 +31,20 @@ public class PostController {
 		return SuccessResponse.created(postService.create(postCreateRequest));
 	}
 
-	@PatchMapping("{/{id}")
+	@PatchMapping("/{id}")
 	public SuccessResponse<PostResponse> updatePost(
 		@Valid @RequestBody PostUpdateRequest postUpdateRequest,
 		@PathVariable Long id
 	) {
 		return SuccessResponse.ok(postService.update(postUpdateRequest, id));
+	}
+
+	@DeleteMapping("/{id}")
+	public SuccessResponse<?> deletePost(
+		@PathVariable Long id
+	) {
+		postService.delete(id);
+		return SuccessResponse.noContent();
 	}
 
 

@@ -52,4 +52,11 @@ public class PostService {
 		return PostResponse.from(post);
 	}
 
+	//게시글 삭제
+	@Transactional
+	public void delete(Long postId) {
+		postRepository.deleteById(postId);
+	}
+
+
 }
