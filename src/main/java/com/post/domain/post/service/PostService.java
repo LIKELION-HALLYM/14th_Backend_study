@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.post.domain.post.dto.request.PostCreateRequest;
+import com.post.domain.post.dto.request.PostUpdateRequest;
 import com.post.domain.post.dto.response.PostResponse;
 import com.post.domain.post.entity.Post;
 import com.post.domain.post.repository.PostRepository;
@@ -35,6 +36,18 @@ public class PostService {
 		);
 
 		postRepository.save(post);
+
+		return PostResponse.from(post);
+	}
+
+	//게시글 수정
+	@Transactional
+	public PostResponse update(PostUpdateRequest request, Long postId) {
+
+		Post post = postRepository.findById(postId)
+			.orElseThrow(() -> new BusinessException(ErrorCode.POST_NOT_FOUND));
+
+		post.update(request);
 
 		return PostResponse.from(post);
 	}

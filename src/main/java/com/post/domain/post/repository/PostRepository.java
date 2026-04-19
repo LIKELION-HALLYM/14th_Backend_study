@@ -11,5 +11,4 @@ import com.post.domain.post.entity.Post;
 public interface PostRepository extends JpaRepository<Post, Long> {
 
 	Optional<Post> findByTitle(String title);
-	Optional<Post> findByPostId(String postId);
 }

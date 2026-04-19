@@ -2,6 +2,7 @@ package com.post.domain.post.entity;
 
 import java.time.LocalDateTime;
 
+import com.post.domain.post.dto.request.PostUpdateRequest;
 import com.post.global.domain.BaseEntity;
 
 import jakarta.persistence.Column;
@@ -10,6 +11,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Lob;
+import jakarta.persistence.PostUpdate;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -49,10 +51,9 @@ public class Post extends BaseEntity {
 	}
 
 	//업데이트 로직
-	public void update(String title, String content, String author) {
-		if (title != null) this.title = title;
-		if (content != null) this.content = content;
-		if (author != null) this.author = author;
+	public void update(PostUpdateRequest updateRequest) {
+		if (title != null) this.title = updateRequest.title();
+		if (content != null) this.content = updateRequest.content();
 	}
 
 }
