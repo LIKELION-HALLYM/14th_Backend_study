@@ -97,4 +97,11 @@ public class PostService {
 		);
 	}
 
+	//게시글 단건 조회
+	public PostResponse getPost(Long postId) {
+		Post post = postRepository.findById(postId)
+			.orElseThrow(() -> new BusinessException(ErrorCode.POST_NOT_FOUND));
+		return PostResponse.from(post);
+	}
+
 }

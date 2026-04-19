@@ -66,4 +66,10 @@ public class PostController {
 		Pageable pageable = PageRequest.of(page, size);
 		return SuccessResponse.ok(postService.getAllExistPaging(pageable));
 	}
+
+	//게시물 단건 조회
+	@GetMapping("/{id}")
+	public SuccessResponse<PostResponse> getPostById(@PathVariable Long id) {
+		return SuccessResponse.ok(postService.getPost(id));
+	}
 }
