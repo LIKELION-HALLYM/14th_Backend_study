@@ -1,5 +1,7 @@
 package com.post.domain.post.entity;
 
+import java.time.LocalDateTime;
+
 import com.post.global.domain.BaseEntity;
 
 import jakarta.persistence.Column;
@@ -7,6 +9,7 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Lob;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -15,7 +18,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table
+@Table(name ="posts")
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @AllArgsConstructor(access = AccessLevel.PRIVATE)
 @Getter
@@ -30,7 +33,8 @@ public class Post extends BaseEntity {
 	@Column(nullable = false, length = 100)
 	private String title;
 
-	@Column(nullable = false, columnDefinition = "TEXT")
+	@Lob
+	@Column(nullable = false)
 	private String content;
 
 	@Column(nullable = false)
@@ -46,9 +50,9 @@ public class Post extends BaseEntity {
 
 	//업데이트 로직
 	public void update(String title, String content, String author) {
-		this.title = title;
-		this.content = content;
-		this.author = author;
+		if (title != null) this.title = title;
+		if (content != null) this.content = content;
+		if (author != null) this.author = author;
 	}
 
 }
