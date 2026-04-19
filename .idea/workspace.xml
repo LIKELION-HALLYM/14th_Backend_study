@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5eb2d589-cf64-4a5b-9de7-54181266b1ce" name="변경" comment="init: submission branch">
+      <change afterPath="$PROJECT_DIR$/.idea/14th_Backend_study.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;leepg038292&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/LIKELION-HALLYM/14th_Backend_study.git&quot;,
+    &quot;accountId&quot;: &quot;bbfbb815-98c9-4d3f-9b1a-720236041e37&quot;
+  }
+}</component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 0
+}</component>
+  <component name="ProjectId" id="3C2EtJuX4jZFr1gw2R24PYbl2Hd" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "week2-sub",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/leepg/OneDrive/바탕 화면/2026/멋쟁이사자_백엔드/14th_Backend_study",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "모듈",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true",
+    "애플리케이션.Step1_VariableAndMethod.executor": "Run",
+    "애플리케이션.Step2_Array.executor": "Run",
+    "애플리케이션.Step3_ClassAndObject.executor": "Run",
+    "애플리케이션.Step4_Encapsulation.executor": "Run",
+    "애플리케이션.Step5_Inheritance.executor": "Run",
+    "애플리케이션.Step6_Interface.executor": "Run",
+    "애플리케이션.Step7_MiniProject.executor": "Run",
+    "애플리케이션.Step_Array.executor": "Run",
+    "애플리케이션.steps.Step1_VariableAndMethod.executor": "Run",
+    "애플리케이션.steps.Step2_Array.executor": "Run",
+    "애플리케이션.steps.step3.Step3_ClassAndObject.executor": "Run",
+    "애플리케이션.test.executor": "Run"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\leepg\OneDrive\바탕 화면\2026\멋쟁이사자_백엔드\14th_Backend_study\week1\이평강\src" />
+      <recent name="C:\Users\leepg\OneDrive\바탕 화면\2026\멋쟁이사자_백엔드\14th_Backend_study\week1\이평강\src\answer" />
+      <recent name="C:\Users\leepg\OneDrive\바탕 화면\2026\멋쟁이사자_백엔드\14th_Backend_study" />
+    </key>
+  </component>
+  <component name="RunManager" selected="애플리케이션.Step1_VariableAndMethod">
+    <configuration name="Step1_VariableAndMethod" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Step1_VariableAndMethod" />
+      <module name="14th_Backend_study" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Step2_Array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Step2_Array" />
+      <module name="14th_Backend_study" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Step3_ClassAndObject" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Step3_ClassAndObject" />
+      <module name="14th_Backend_study" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Step_Array" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Step_Array" />
+      <module name="14th_Backend_study" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="애플리케이션.Step3_ClassAndObject" />
+        <item itemvalue="애플리케이션.Step1_VariableAndMethod" />
+        <item itemvalue="애플리케이션.Step_Array" />
+        <item itemvalue="애플리케이션.Step2_Array" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-84258761d1cc-intellij.indexing.shared.core-IU-243.28141.18" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.28141.18" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="디폴트 작업">
+      <changelist id="5eb2d589-cf64-4a5b-9de7-54181266b1ce" name="변경" comment="" />
+      <created>1775575478193</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1775575478193</updated>
+      <workItem from="1775575479519" duration="7530000" />
+      <workItem from="1775643464638" duration="84000" />
+      <workItem from="1775643606305" duration="17000" />
+      <workItem from="1775643630636" duration="15000" />
+      <workItem from="1775643654299" duration="294000" />
+      <workItem from="1775643963526" duration="127000" />
+      <workItem from="1775644102901" duration="22632000" />
+      <workItem from="1776234108308" duration="606000" />
+      <workItem from="1776611381662" duration="1429000" />
+    </task>
+    <task id="LOCAL-00001" summary="chore : 프로젝트 구조 세팅">
+      <option name="closed" value="true" />
+      <created>1775659556891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1775659556891</updated>
+    </task>
+    <task id="LOCAL-00002" summary="docs : PR 템플릿 내용 변경 및 과제(readme)명세 작성">
+      <option name="closed" value="true" />
+      <created>1775659600158</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1775659600158</updated>
+    </task>
+    <task id="LOCAL-00003" summary="chore: .gitignore 추가 및 out 폴더 제거">
+      <option name="closed" value="true" />
+      <created>1775659808367</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1775659808367</updated>
+    </task>
+    <task id="LOCAL-00004" summary="init: submission branch">
+      <option name="closed" value="true" />
+      <created>1776612325810</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1776612325811</updated>
+    </task>
+    <task id="LOCAL-00005" summary="init: submission branch">
+      <option name="closed" value="true" />
+      <created>1776612452622</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1776612452622</updated>
+    </task>
+    <task id="LOCAL-00006" summary="init: submission branch">
+      <option name="closed" value="true" />
+      <created>1776612600909</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1776612600909</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="chore : 프로젝트 구조 세팅" />
+    <MESSAGE value="docs : PR 템플릿 내용 변경 및 과제(readme)명세 작성" />
+    <MESSAGE value="chore: .gitignore 추가 및 out 폴더 제거" />
+    <MESSAGE value="init: submission branch" />
+    <option name="LAST_COMMIT_MESSAGE" value="init: submission branch" />
+  </component>
+</project>
