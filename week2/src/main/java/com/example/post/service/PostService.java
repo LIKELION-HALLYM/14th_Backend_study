@@ -41,4 +41,19 @@ public class PostService {
                 .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 게시글입니다."));
         return new PostResponseDto(post);
     }
+
+    // 수정
+    public PostResponseDto updatePost(Long postId, PostRequestDto requestDto) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 게시글입니다."));
+        post.update(requestDto.getTitle(), requestDto.getContent());
+        return new PostResponseDto(post);
+    }
+
+    // 삭제
+    public void deletePost(Long postId) {
+        Post post = postRepository.findById(postId)
+                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 게시글입니다."));
+        postRepository.delete(post);
+    }
 }

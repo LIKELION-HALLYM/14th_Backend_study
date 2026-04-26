@@ -36,4 +36,19 @@ public class PostController {
     public ResponseEntity<PostResponseDto> getPost(@PathVariable Long postId) {
         return ResponseEntity.ok(postService.getPost(postId));
     }
+
+    // 수정
+    @PatchMapping("/{postId}")
+    public ResponseEntity<PostResponseDto> updatePost(
+            @PathVariable Long postId,
+            @Valid @RequestBody PostRequestDto requestDto) {
+        return ResponseEntity.ok(postService.updatePost(postId, requestDto));
+    }
+
+    // 삭제
+    @DeleteMapping("/{postId}")
+    public ResponseEntity<String> deletePost(@PathVariable Long postId) {
+        postService.deletePost(postId);
+        return ResponseEntity.ok("게시글이 삭제되었습니다.");
+    }
 }
