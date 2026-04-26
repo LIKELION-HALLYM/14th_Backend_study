@@ -1,10 +1,12 @@
 package com.example.post.dto;
 
 import com.example.post.domain.Post;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import lombok.Getter;
 import java.time.LocalDateTime;
 
 @Getter
+@JsonPropertyOrder({"id", "title", "content", "author", "createdAt", "updatedAt"})
 public class PostResponseDto {
 
     private Long id;
