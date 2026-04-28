@@ -4,9 +4,11 @@ import com.example.post.domain.Post;
 import com.example.post.dto.PostListResponseDto;
 import com.example.post.dto.PostRequestDto;
 import com.example.post.dto.PostResponseDto;
+import com.example.post.exception.PostNotFoundException;
 import com.example.post.repository.PostRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,6 +19,7 @@ public class PostService {
 
     private final PostRepository postRepository;
 
+    @Transactional
     public PostResponseDto createPost(PostRequestDto requestDto) {
         Post post = new Post(
                 requestDto.getTitle(),
@@ -27,7 +30,7 @@ public class PostService {
         return new PostResponseDto(saved);
     }
 
-    // 전체 조회
+    @Transactional(readOnly = true)
     public List<PostListResponseDto> getAllPosts() {
         return postRepository.findAllByOrderByCreatedAtDesc()
                 .stream()
@@ -35,25 +38,25 @@ public class PostService {
                 .collect(Collectors.toList());
     }
 
-    // 상세 조회
+    @Transactional(readOnly = true)
     public PostResponseDto getPost(Long postId) {
         Post post = postRepository.findById(postId)
-                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 게시글입니다."));
+                .orElseThrow(() -> new PostNotFoundException(postId));
         return new PostResponseDto(post);
     }
 
-    // 수정
+    @Transactional
     public PostResponseDto updatePost(Long postId, PostRequestDto requestDto) {
         Post post = postRepository.findById(postId)
-                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 게시글입니다."));
+                .orElseThrow(() -> new PostNotFoundException(postId));
         post.update(requestDto.getTitle(), requestDto.getContent());
         return new PostResponseDto(post);
     }
 
-    // 삭제
+    @Transactional
     public void deletePost(Long postId) {
         Post post = postRepository.findById(postId)
-                .orElseThrow(() -> new IllegalArgumentException("존재하지 않는 게시글입니다."));
+                .orElseThrow(() -> new PostNotFoundException(postId));
         postRepository.delete(post);
     }
 }

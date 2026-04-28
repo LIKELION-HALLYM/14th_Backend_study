@@ -8,6 +8,7 @@ import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.example.post.dto.SuccessResponse;
 
 import java.util.List;
 
@@ -19,36 +20,32 @@ public class PostController {
     private final PostService postService;
 
     @PostMapping
-    public ResponseEntity<PostResponseDto> createPost(
+    public ResponseEntity<SuccessResponse<PostResponseDto>> createPost(
             @Valid @RequestBody PostRequestDto requestDto) {
         PostResponseDto response = postService.createPost(requestDto);
-        return ResponseEntity.ok(response);
+        return ResponseEntity.ok(SuccessResponse.of("게시글이 등록되었습니다.", response));
     }
 
-    // 전체 조회
     @GetMapping
-    public ResponseEntity<List<PostListResponseDto>> getAllPosts() {
-        return ResponseEntity.ok(postService.getAllPosts());
+    public ResponseEntity<SuccessResponse<List<PostListResponseDto>>> getAllPosts() {
+        return ResponseEntity.ok(SuccessResponse.of("게시글 목록 조회 성공", postService.getAllPosts()));
     }
 
-    // 상세 조회
     @GetMapping("/{postId}")
-    public ResponseEntity<PostResponseDto> getPost(@PathVariable Long postId) {
-        return ResponseEntity.ok(postService.getPost(postId));
+    public ResponseEntity<SuccessResponse<PostResponseDto>> getPost(@PathVariable Long postId) {
+        return ResponseEntity.ok(SuccessResponse.of("게시글 조회 성공", postService.getPost(postId)));
     }
 
-    // 수정
     @PatchMapping("/{postId}")
-    public ResponseEntity<PostResponseDto> updatePost(
+    public ResponseEntity<SuccessResponse<PostResponseDto>> updatePost(
             @PathVariable Long postId,
             @Valid @RequestBody PostRequestDto requestDto) {
-        return ResponseEntity.ok(postService.updatePost(postId, requestDto));
+        return ResponseEntity.ok(SuccessResponse.of("게시글이 수정되었습니다.", postService.updatePost(postId, requestDto)));
     }
 
-    // 삭제
     @DeleteMapping("/{postId}")
-    public ResponseEntity<String> deletePost(@PathVariable Long postId) {
+    public ResponseEntity<SuccessResponse<Void>> deletePost(@PathVariable Long postId) {
         postService.deletePost(postId);
-        return ResponseEntity.ok("게시글이 삭제되었습니다.");
+        return ResponseEntity.ok(SuccessResponse.of("게시글이 삭제되었습니다."));
     }
 }

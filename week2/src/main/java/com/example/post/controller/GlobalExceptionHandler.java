@@ -1,5 +1,6 @@
 package com.example.post.controller;
 
+import com.example.post.exception.PostNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -22,9 +23,8 @@ public class GlobalExceptionHandler {
         return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errors);
     }
 
-    // 존재하지 않는 게시글 예외 처리
-    @ExceptionHandler(IllegalArgumentException.class)
-    public ResponseEntity<Map<String, String>> handleIllegalArgumentException(IllegalArgumentException e) {
+    @ExceptionHandler(PostNotFoundException.class)
+    public ResponseEntity<Map<String, String>> handlePostNotFoundException(PostNotFoundException e) {
         Map<String, String> error = new HashMap<>();
         error.put("error", e.getMessage());
         return ResponseEntity.status(HttpStatus.NOT_FOUND).body(error);
